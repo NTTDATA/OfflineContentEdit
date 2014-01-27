@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense" xmlns:content="http://www.sitecore.net/content">
+  <SelectExportFields>
+    <FormDialog Header="Select Export Fields" Text="Select export fields">
+      <Stylesheet Key="SetBaseTemplates">
+        .scContentControl {
+        height:100%;
+        border:none;
+        }
+        .scContentControlMultilistBox {
+        height:100%;
+        }
+        .scContentControlTreelist {
+        border:none;
+        }
+      </Stylesheet>
+      <CodeBeside Type="TheDreamCorps.OfflineContentEditor.Client.Forms.SelectExportFields,TheDreamCorps.OfflineContentEditor"/>
+
+      <Border ID="TreeListPanel">        
+        
+      </Border>      
+      
+    </FormDialog>
+  </SelectExportFields>
+</control>

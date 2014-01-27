@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <UploadImportFile>
+    <WizardForm CodeBeside="TheDreamCorps.OfflineContentEditor.Client.Forms.UploadImportFileForm, TheDreamCorps.OfflineContentEditor" FormTarget="sitecoreupload" Enctype="multipart/form-data" GridPanel.Height="100%">
+      
+      <WizardFormFirstPage ID="FirstPage" Icon="Applications/32x32/Import1.png">
+        <Border Class="scWizardWelcomeTitle">
+          <Literal Text="Welcome to the Import Wizard."/>
+        </Border>
+        <Literal Text="This wizard allows you to:"/>
+        <ul>
+          <li class="scWizardBullet">
+            <Literal Text="Import a set of items in csv format"/>
+          </li>
+        </ul>
+      </WizardFormFirstPage>
+
+      <WizardFormPage ID="Files" Header="Select File" Text="Select a file to upload. Click Next when done." Icon="Applications/32x32/Import1.png">
+        <WizardFormIndent>
+          <Border>
+            <Button ID="Upload" Header="Upload" Click="import:upload"/>
+          </Border>
+        </WizardFormIndent>
+      </WizardFormPage>
+
+      <WizardFormPage ID="Uploading" Header="Uploading" Text="Please wait while the item(s) are being updated..." Icon="Applications/32x32/Import1.png">
+        <GridPanel Width="100%">
+          <Border Height="64"/>
+
+          <ThemedImage Src="Applications/48x48/Import1.png" Width="48" Height="48" GridPanel.Align="center"/>
+
+          <Space Height="16"/>
+
+          <Border Align="center">
+            <ThemedImage Src="Images/progress.gif" Width="94" Height="17"/>
+          </Border>
+
+          <Space Height="16"/>
+
+          <Border Align="center" GridPanel.Align="center" GridPanel.Style="font-weight:bold">
+            <Literal Text="Uploading..."/>
+          </Border>
+          <Border Align="center" GridPanel.Align="center" GridPanel.Style="font-weight:bold">
+            <Literal ID="Status" Text=""/>
+          </Border>
+        </GridPanel>
+      </WizardFormPage>
+
+      <WizardFormLastPage ID="LastPage" Icon="Applications/32x32/Import1.png">
+        <Literal Text="The wizard has completed. Click the Finish button to close the Wizard."/>
+      </WizardFormLastPage>
+
+    </WizardForm>
+  </UploadImportFile>
+</control>
